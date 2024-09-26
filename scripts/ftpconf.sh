@@ -1,2 +1,2 @@
 #!/bin/bash
-cp /home/pi/install/vsftpd.conf /etc/
+cp /home/pi/auxfm/vsftpd.conf /etc/
