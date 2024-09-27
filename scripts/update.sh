@@ -1,2 +1,2 @@
 #!/bin/bash
-apt update && sudo apt upgrade
+apt update && sudo apt upgrade -y
