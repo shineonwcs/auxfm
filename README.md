@@ -11,7 +11,7 @@ PBS Lighting Music & Light Synchronization Controller $311
 Photosensitive timer for auto on and off $20
 Small power strip (3 plug minimum) $5
 Electrical box for outdoor use $30 https://www.amazon.com/dp/B0BJV1GCR6?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
-About 2-3 hours of your time off and on while files transfer and software installs  
+About 1-2 hours of your time off and on while files transfer and software installs  
 
 Assemble your pi, attaching the antenna to GPIO 4. If you want optimal signal you can get the ideal length of a dipole antenna from https://www.omnicalculator.com/physics/dipole#faqs. I just put on a couple of feet of wire and it reaches 50m with ease. Attach the usb aux port. I used a splitter to go to the aux and to some headphones for testing, but this is not required and would not need to be in place when it goes live.  
 This is what mine looked like after assembly https://photos.app.goo.gl/HasMmrrbMnK78xm77  
@@ -39,7 +39,7 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 sudo ./auxfm/auxfm.sh
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
-Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name  
+Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
 I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.
 ```
 sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/music/FILENAME.wav | play /home/pi/music/FILENAME.wav
