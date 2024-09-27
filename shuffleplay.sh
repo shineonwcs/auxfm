@@ -1,38 +1,38 @@
-#!/bin/bash  
-while getopts f:s:d:h: flag
+#!/bin/bash
+frequency=91.3
+songlist=50
+directory=/home/pi/music/
+down="sudo shutdown now"
+
+while getopts "f:s:d:hx" flag
 do
     case "${flag}" in
-        f) frequency=${OPTARG:-91.3};;
-        s) songlist=${OPTARG:-50};;
-        d) directory=${OPTARG:-/home/pi/music/};;
-        h) help=${OPTARG};;
-    esac
-done
-############################################################
-# Help                                                     #
-############################################################
-Help()
-{
-   # Display Help
-   echo "Add description of the script functions here."
+        f) frequency=${OPTARG};;
+        s) songlist=${OPTARG};;
+        d) directory=${OPTARG};;
+        h)
    echo
-   echo "Syntax: scriptTemplate [-h|-f|-s|-d|-x]"
+   echo "Syntax: ./shuffleplay.sh [-h|-f|-s|-d|-x]"
    echo "options:"
    echo "-h     Print this Help."
-   echo "-f     Set FM transmitter frequency from default of 91.3"
-   echo "-s     Change number of songs to be shuffled and played from default of 50"
-   echo "-d     Change dirictory to play music from default of /home/pi/music/"
+   echo "-f num    Set FM transmitter frequency (Default 91.3)"
+   echo "-s num    Change number of songs to be shuffled and played (Default 50)"
+   echo "-d /path/to/dir/    Change dirictory to play music (Default /home/pi/music/)"
    echo "-x     Disable shutdown after finishing playlist"
    echo
-}
-
+   exit 0
+   ;;
+        x) down=""
+   ;;
+    esac
+done
 ############################################################
 ############################################################
 # Main program                                             #
 ############################################################
 ############################################################
-ls $4*.wav | shuf -n $2 > playlist.tmp  
-while IFS= read -r line; do  
-sudo /home/pi/fm_transmitter/fm_transmitter -f $1 $line | play $line  
-done < playlist.tmp  
-sudo shutdown now
+ls "$directory"*.wav | shuf -n $songlist > playlist.tmp
+while IFS= read -r line; do
+sudo /home/pi/fm_transmitter/fm_transmitter -f $frequency $line | play $line
+done < playlist.tmp
+$down
