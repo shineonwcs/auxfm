@@ -39,7 +39,7 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 sudo ./auxfm/auxfm.sh
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
-Need to convert your files from mp3? Copy convert.sh to the folder you want to convert in and run it with
+Need to convert your files from mp3? Copy convert.sh (located in /home/pi/music/) to the folder you want to convert in and run it with
 ```
 ./convert.sh
 ```
