@@ -2,7 +2,7 @@
 There isn't anything groundbreaking here, I am just trying to make it easy to get started with controlling lights and a pi from your computer.
 Supplies:  
 Pi Zero W $15 ($16 if you get with headers to potentially skip any soldering with push wires)  
-Wire for antenna on GPIO 4 $0 (just used scrap)  
+Wire for antenna on GPIO 4 $0 (just used scrap).  
 15 W Power supply for pi $6  
 32GB micro sd card $4  
 OTG Micro usb to usb C $4 https://www.amazon.com/gp/product/B07VBV1PY5/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
@@ -13,8 +13,10 @@ Small power strip (3 plug minimum) $5
 Electrical box for outdoor use $30 https://www.amazon.com/dp/B0BJV1GCR6?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 About 2-3 hours of your time off and on while files transfer and software installs  
 
+Assemble your pi, attaching the antenna to GPIO 4. If you want optimal signal you can get the ideal length of a dipole antenna from https://www.omnicalculator.com/physics/dipole#faqs. I just put on a couple of feet of wire and it reaches 50m with ease. Attach the usb aux port. I used a splitter to go to the aux and to some headphones for testing, but this is not required and would not need to be in place when it goes live.  
+
 Using the Raspberry Pi Imager install the latest Lite 32 bit OS  
-Make sure to edit the settings to allow ssh with a user named pi with the password of your choice as well as adding your wifi network SSID and password.  
+Make sure to edit the settings to allow ssh with a user named pi with the password of your choice as well as adding your wifi network SSID and password.
 Use the SSH program of your choice to access the terminal on your pi, such as Putty for Windows or regular terminal on Linux.  
 Once logged in we need to install git.
 ```
