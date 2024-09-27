@@ -21,7 +21,7 @@ Once logged in we need to install git.
 sudo apt update
 ```
 ```
-sudo apt install git
+sudo apt install git -y
 ```
 
 Clone the repo  
