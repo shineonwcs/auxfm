@@ -39,8 +39,12 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 sudo ./auxfm/auxfm.sh
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
+Need to convert your files from mp3? Copy convert.sh to the folder you want to convert in and run it with
+```
+./convert.sh
+```
 Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
-I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.
+I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.  I am using the github repo by markondej at https://github.com/markondej/fm_transmitter if you want more information on the fm transmitter.
 ```
 sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/music/FILENAME.wav | play /home/pi/music/FILENAME.wav
 ```
@@ -48,16 +52,20 @@ To auto start playlist on boot we need to edit cron
 ```
 sudo crontab -e
 ```
-Add this to the end of the cron file  
+Add this to the end of the cron file with any options that you want changed (-f to change the frequency, -s to change the number of songs, -d to change the path to your wave files, -x to disable shutdown on finish)   
 ```
 @reboot bash /home/pi/shuffleplay.sh
 ```
 Play 50 songs at random from playlist then shutdown for night. 
-**This will shut your pi down on completion!** You can comment out the final line to prevent shutdown, however the pi does need to be properly shutdown before removing power to prevent possible corruption of the filesystem.
+**This will shut your pi down on completion!** You can pass the argument -x prevent shutdown, however the pi does need to be properly shutdown before removing power to prevent possible corruption of the filesystem.
 ```
 cd ~/
 ```
 ```
 ./shuffleplay.sh  
+```
+An example of usage with arguments to change to 5 songs, at 98.5 FM, in the directory /home/pi/music/edm/ without shutting down at the end  
+```
+./shuffleplay.sh -s 5 -f 98.5 -d /home/pi/music/edm/ -x
 ```
 
