@@ -55,6 +55,9 @@ Add this to the end of the cron file
 Play 50 songs at random from playlist then shutdown for night. 
 **This will shut your pi down on completion!** You can comment out the final line to prevent shutdown, however the pi does need to be properly shutdown before removing power to prevent possible corruption of the filesystem.
 ```
-./shuffleplay50.sh  
+cd ~/
+```
+```
+./shuffleplay.sh  
 ```
 
