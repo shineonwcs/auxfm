@@ -14,7 +14,7 @@ Electrical box for outdoor use $30 https://www.amazon.com/dp/B0BJV1GCR6?ref=ppx_
 About 2-3 hours of your time off and on while files transfer and software installs  
 
 Assemble your pi, attaching the antenna to GPIO 4. If you want optimal signal you can get the ideal length of a dipole antenna from https://www.omnicalculator.com/physics/dipole#faqs. I just put on a couple of feet of wire and it reaches 50m with ease. Attach the usb aux port. I used a splitter to go to the aux and to some headphones for testing, but this is not required and would not need to be in place when it goes live.  
-
+This is what mine looked like after assembly https://photos.app.goo.gl/HasMmrrbMnK78xm77  
 Using the Raspberry Pi Imager install the latest Lite 32 bit OS  
 Make sure to edit the settings to allow ssh with a user named pi with the password of your choice as well as adding your wifi network SSID and password.
 Use the SSH program of your choice to access the terminal on your pi, such as Putty for Windows or regular terminal on Linux.  
