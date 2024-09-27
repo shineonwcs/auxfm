@@ -6,4 +6,5 @@ bash /home/pi/auxfm/scripts/sound.sh
 bash /home/pi/auxfm/scripts/fm_transmitter.sh
 mv /home/pi/auxfm/shuffleplay50.sh /home/pi/
 mkdir /home/pi/music
+mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
 sudo reboot now
