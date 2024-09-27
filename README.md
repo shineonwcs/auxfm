@@ -1,4 +1,4 @@
-# Simple scripts automating install for simultanious aux and fm playing of wav files starting with a fresh install af Rasbian on a zero W  
+# Simple scripts automating install for simultanious aux and fm playing of wav files starting with a fresh install of Rasbian on a zero W  
 ```
 git clone https://github.com/shineonwcs/auxfm.git  
 ```
@@ -10,10 +10,17 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 ```
 sudo ./auxfm/auxfm.sh
 ```
+To auto start playlist on boot we need to edit cron  
+```
+sudo crontab -e
+```
+Add this to the end of the cron file  
+```
+@reboot bash /home/pi/shuffleplay.sh
+```
 Play 50 songs at random from playlist then shutdown for night. 
 **This will shut your pi down on completion!** You can comment out the final line to prevent shutdown.
 ```
-./shuffleplay50.sh
+./shuffleplay50.sh  
 ```
 
-To come script to for scheduling
