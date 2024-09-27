@@ -10,4 +10,10 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 ```
 sudo ./auxfm/auxfm.sh
 ```
-To come script to play playlist consisting of all files in music folder
+Play 50 songs at random from playlist then shutdown for night. 
+**This will shut your pi down on completion!** You can comment out the final line to prevent shutdown.
+```
+./shuffleplay50.sh
+```
+
+To come script to for scheduling
