@@ -1,7 +1,7 @@
 # Simple scripts automating install for simultanious aux and fm playing of wav files starting with a fresh install of Rasbian on a zero W  
 There isn't anything groundbreaking here, I am just trying to make it easy to get started with controlling lights and a pi from your computer.
 Supplies:  
-Pi Zero W $15 ($16 if you get with headers to skip any soldering)  
+Pi Zero W $15 ($16 if you get with headers to potentially skip any soldering with push wires)  
 Wire for antenna on GPIO 4 $0 (just used scrap)  
 15 W Power supply for pi $6  
 32GB micro sd card $4  
@@ -38,6 +38,7 @@ sudo ./auxfm/auxfm.sh
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
 Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name  
+I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.
 ```
 sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/music/FILENAME.wav | play /home/pi/music/FILENAME.wav
 ```
