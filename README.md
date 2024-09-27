@@ -1,4 +1,5 @@
 # Simple scripts automating install for simultanious aux and fm playing of wav files starting with a fresh install of Rasbian on a zero W  
+There isn't anything groundbreaking here, I am just trying to make it easy to get started with controlling lights and a pi from your computer.
 Supplies:  
 Pi Zero W $15 ($16 if you get with headers to skip any soldering)  
 Wire for antenna on GPIO 4 $0 (just used scrap)  
@@ -12,6 +13,16 @@ Small power strip (3 plug minimum) $5
 Electrical box for outdoor use $30 https://www.amazon.com/dp/B0BJV1GCR6?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 About 2-3 hours of your time off and on while files transfer and software installs  
 
+Using the Raspberry Pi Imager install the latest Lite 32 bit OS  
+Make sure to edit the settings to allow ssh with a user named pi with the password of your choice as well as adding your wifi network SSID and password.  
+Use the SSH program of your choice to access the terminal on your pi, such as Putty for Windows or regular terminal on Linux.  
+Once logged in we need to install git.
+```
+sudo apt update
+```
+```
+sudo apt install git
+```
 
 Clone the repo  
 ```
