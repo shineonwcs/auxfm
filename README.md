@@ -39,9 +39,9 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 sudo ./auxfm/auxfm.sh
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
-Need to convert your files from mp3? Copy convert.sh (located in /home/pi/music/) to the folder you want to convert in and run it with
+Need to convert your files from mp3? Copy soxconvert.sh (located in /home/pi/music/) to the folder you want to convert in and run it with
 ```
-./convert.sh
+./soxconvert.sh
 ```
 Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
 I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.  I am using the github repo by markondej at https://github.com/markondej/fm_transmitter if you want more information on the fm transmitter.
