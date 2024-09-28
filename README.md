@@ -18,7 +18,7 @@ This is what mine looked like after assembly https://photos.app.goo.gl/HasMmrrbM
 Using the Raspberry Pi Imager install the latest Lite 32 bit OS  
 Make sure to edit the settings to allow ssh with a user named pi with the password of your choice as well as adding your wifi network SSID and password.
 Use the SSH program of your choice to access the terminal on your pi, such as Putty for Windows or regular terminal on Linux.  
-Once logged in we need to install git.
+Once logged in we need to install updates and dependencies.
 ```
 sudo apt update && sudo apt upgrade -y
 ```
