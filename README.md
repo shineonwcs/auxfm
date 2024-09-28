@@ -1,5 +1,5 @@
 # Simple scripts automating install for simultanious aux and fm playing of wav files starting with a fresh install of Rasbian on a zero W  
-There isn't anything groundbreaking here, I am just trying to make it easy to get started with controlling lights and a pi from your computer.
+This repo is to make it easy to set up a Pi Zero W to play music via FM and output to an aux port at the same time to drive a music synchronization controller. It makes the software side relatively easy for a DIYer to set up a really cool light show with up to 10 channels. If you are in the Kansas City area and want it made for you I own Shine-On Home Services and we do Christmas lights! https://shineon.biz/christmas-lights/
 Supplies:  
 Pi Zero W $15 ($16 if you get with headers to potentially skip any soldering with push wires)  
 Wire for antenna on GPIO 4 $0 (just used scrap).  
@@ -7,7 +7,7 @@ Wire for antenna on GPIO 4 $0 (just used scrap).
 32GB micro sd card $4  
 OTG Micro usb to usb C $4 https://www.amazon.com/gp/product/B07VBV1PY5/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 USB C to Aux $5 (cheapest one from Walmart works fine)  
-PBS Lighting Music & Light Synchronization Controller $311  
+PBS Lighting Music & Light Synchronization Controller $311 https://thechristmaslightemporium.com/products/the-music-box-music-light-synchronization-controller  
 Photosensitive timer for auto on and off $20
 Small power strip (3 plug minimum) $5
 Electrical box for outdoor use $30 https://www.amazon.com/dp/B0BJV1GCR6?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
