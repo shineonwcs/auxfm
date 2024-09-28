@@ -23,7 +23,7 @@ Once logged in we need to install updates and dependencies.
 sudo apt update && sudo apt upgrade -y
 ```
 ```
-sudo apt install vsftpd vim sox libsox-fmt-mp3 make build-essential libraspberrypi-dev git -y
+sudo apt install vsftpd vim sox libsox-fmt-mp3 make build-essential libraspberrypi-dev detox git -y
 ```
 Make sure you are in the correct directory and clone the repos make the fm_transmitter  
 ```
@@ -49,9 +49,9 @@ I am using frequency 91.3 because it is low traffic in my area. You can check wh
 sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/fm_transmitter/acoustic_guitar_duet.wav | play /home/pi/fm_transmitter/acoustic_guitar_duet.wav
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
-You can rename all of the wav files in a directory to simple numbered filenames with:
+You can rename all of the wav files in a directory to names that won't break with detox:
 ```
-ls -v *.wav | cat -n | while read n f; do mv -n "$f" "$n.wav"; done
+detox /path/to/directory/
 ```
 Need to convert your files from mp3? Use soxconvert -d /path/to/directory/ (default directory /home/pi/music/) **Note: takes a while and is not very verbose.**
 ```
