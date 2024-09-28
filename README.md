@@ -20,7 +20,7 @@ Make sure to edit the settings to allow ssh with a user named pi with the passwo
 Use the SSH program of your choice to access the terminal on your pi, such as Putty for Windows or regular terminal on Linux.  
 Once logged in we need to install git.
 ```
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 ```
 ```
 sudo apt install git -y
