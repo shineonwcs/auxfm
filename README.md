@@ -40,7 +40,9 @@ sudo ./auxfm/auxfm.sh
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
 You can rename all of the wav files in a directory to simple numbered filenames with (highly recommend getting all of the files you want in the directory before doing this):
+```
 ls -v *.wav | cat -n | while read n f; do mv -n "$f" "$n.wav"; done
+```
 Need to convert your files from mp3? Use soxconvert -d /path/to/directory/ (default directory /home/pi/music/) **Note: takes a while and is not very verbose.**
 ```
 soxconvert
