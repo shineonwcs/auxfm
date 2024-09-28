@@ -34,7 +34,7 @@ Allow all of the scripts to be executed
 ```
 chmod -R +x auxfm/*.sh
 ```
-Run the scripts to update, upgrade, install dependencies, configure vsftpd for file transfer using Filezilla or such, make music folder at /home/pi/music, conf alsa for aux port use, and install fm_transmitter. The pi will reboot when finished.  
+Run the scripts to update, upgrade, install dependencies, configure vsftpd for file transfer using Filezilla or such, make music directory at /home/pi/music, conf alsa for aux port use, and install fm_transmitter. The pi will reboot when finished.  
 ```
 sudo ./auxfm/auxfm.sh
 ```
