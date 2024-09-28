@@ -49,7 +49,7 @@ I am using frequency 91.3 because it is low traffic in my area. You can check wh
 sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/fm_transmitter/acoustic_guitar_duet.wav | play /home/pi/fm_transmitter/acoustic_guitar_duet.wav
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
-You can rename all of the wav files in a directory to simple numbered filenames with (highly recommend getting all of the files you want in the directory before doing this):
+You can rename all of the wav files in a directory to simple numbered filenames with:
 ```
 ls -v *.wav | cat -n | while read n f; do mv -n "$f" "$n.wav"; done
 ```
