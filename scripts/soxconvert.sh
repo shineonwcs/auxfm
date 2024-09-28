@@ -1,4 +1,3 @@
-
 #!/bin/bash
 directory=/home/pi/music/
 while getopts "d:" flag
