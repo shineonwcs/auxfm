@@ -32,7 +32,7 @@ git clone https://github.com/shineonwcs/auxfm.git
 ```
 Allow all of the scripts to be executed  
 ```
-chmod -R +x auxfm/*.sh
+chmod -R +x /home/pi/auxfm/*.sh
 ```
 Run the scripts to update, upgrade, install dependencies, configure vsftpd for file transfer using Filezilla or such, make music directory at /home/pi/music, conf alsa for aux port use, and install fm_transmitter. The pi will reboot when finished.  
 ```
