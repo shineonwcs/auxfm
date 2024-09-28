@@ -31,7 +31,7 @@ cd /home/pi/ && git clone https://github.com/shineonwcs/auxfm.git
 ```
 Allow all of the scripts to be executed, make the music directory and move the sample file 
 ```
-chmod +x /home/pi/auxfm/*.sh && chmod +x /home/pi/auxfm/*.sh && mkdir /home/pi/music && mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
+chmod +x /home/pi/auxfm/*.sh && chmod +x /home/pi/auxfm/scripts/*.sh && mkdir /home/pi/music && mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
 ```
 Run the scripts to update, upgrade, install dependencies, configure vsftpd for file transfer using Filezilla or such, make music directory at /home/pi/music, conf alsa for aux port use, and install fm_transmitter. The pi will reboot when finished.  
 ```
