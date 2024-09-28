@@ -43,10 +43,10 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 ```
 sudo ./auxfm/auxfm.sh
 ```
-Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
+Test out a single wav file to make sure everything is functioning properly.  
 I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.  I am using the github repo by markondej at https://github.com/markondej/fm_transmitter if you want more information on the fm transmitter.
 ```
-sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/music/FILENAME.wav | play /home/pi/music/FILENAME.wav
+sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/fm_transmitter/acoustic_guitar_duet.wav | play /home/pi/fm_transmitter/acoustic_guitar_duet.wav
 ```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
 You can rename all of the wav files in a directory to simple numbered filenames with (highly recommend getting all of the files you want in the directory before doing this):
