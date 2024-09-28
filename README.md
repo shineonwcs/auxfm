@@ -25,13 +25,19 @@ sudo apt update && sudo apt upgrade -y
 ```
 sudo apt install vsftpd vim sox libsox-fmt-mp3 make build-essential libraspberrypi-dev git -y
 ```
-Make sure you are in the correct directory and clone the repo  
+Make sure you are in the correct directory and clone the repos make the fm_transmitter  
 ```
-cd /home/pi/ && git clone https://github.com/shineonwcs/auxfm.git  
+cd /home/pi/
+git clone https://github.com/shineonwcs/auxfm.git
+git clone https://github.com/markondej/fm_transmitter
+cd fm_transmitter
+make
 ```
-Allow all of the scripts to be executed, make the music directory and move the sample file 
+Allow all of the scripts to be executed, make the music directory 
 ```
-chmod +x /home/pi/auxfm/*.sh && chmod +x /home/pi/auxfm/scripts/*.sh && mkdir /home/pi/music && mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
+chmod +x /home/pi/auxfm/*.sh
+chmod +x /home/pi/auxfm/scripts/*.sh
+mkdir /home/pi/music
 ```
 Run the scripts to update, upgrade, install dependencies, configure vsftpd for file transfer using Filezilla or such, make music directory at /home/pi/music, conf alsa for aux port use, and install fm_transmitter. The pi will reboot when finished.  
 ```
