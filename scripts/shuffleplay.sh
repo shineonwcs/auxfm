@@ -35,4 +35,5 @@ ls "$directory"*.wav | shuf -n $songlist > playlist.tmp
 while IFS= read -r line; do
 sudo /home/pi/fm_transmitter/fm_transmitter -f $frequency $line | play $line
 done < playlist.tmp
+rm playlist.tmp
 $down
