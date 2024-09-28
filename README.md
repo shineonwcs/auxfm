@@ -40,7 +40,7 @@ sudo ./auxfm/auxfm.sh
 ```
 Non root items to be done
 ```
-bash/home/pi/auxfm/scripts/fm_transmitter.sh && mkdir /home/pi/music && mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
+mkdir /home/pi/music && mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
 ```
 Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
 I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.  I am using the github repo by markondej at https://github.com/markondej/fm_transmitter if you want more information on the fm transmitter.
