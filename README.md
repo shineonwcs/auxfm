@@ -30,17 +30,13 @@ Clone the repo
 ```
 git clone https://github.com/shineonwcs/auxfm.git  
 ```
-Allow all of the scripts to be executed  
+Allow all of the scripts to be executed, make the music directory and move the sample file 
 ```
-chmod -R +x /home/pi/auxfm/*.sh
+chmod -R +x /home/pi/auxfm/*.sh && mkdir /home/pi/music && mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
 ```
 Run the scripts to update, upgrade, install dependencies, configure vsftpd for file transfer using Filezilla or such, make music directory at /home/pi/music, conf alsa for aux port use, and install fm_transmitter. The pi will reboot when finished.  
 ```
 sudo ./auxfm/auxfm.sh
-```
-Non root items to be done
-```
-mkdir /home/pi/music && mv /home/pi/auxfm/FILENAME.wav /home/pi/music/
 ```
 Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
 I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.  I am using the github repo by markondej at https://github.com/markondej/fm_transmitter if you want more information on the fm transmitter.
