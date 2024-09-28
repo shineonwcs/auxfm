@@ -1,6 +1,4 @@
 #!/bin/bash
-bash /home/pi/auxfm/scripts/update.sh
-bash /home/pi/auxfm/scripts/deps.sh
 bash /home/pi/auxfm/scripts/ftpconf.sh
 bash /home/pi/auxfm/scripts/sound.sh
 cp /home/pi/auxfm/scripts/shuffleplay.sh /usr/bin/shuffleplay
