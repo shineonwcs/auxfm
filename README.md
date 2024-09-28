@@ -38,6 +38,11 @@ Run the scripts to update, upgrade, install dependencies, configure vsftpd for f
 ```
 sudo ./auxfm/auxfm.sh
 ```
+Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
+I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.  I am using the github repo by markondej at https://github.com/markondej/fm_transmitter if you want more information on the fm transmitter.
+```
+sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/music/FILENAME.wav | play /home/pi/music/FILENAME.wav
+```
 ### Transfer your wav files to the pi using ftp. **Note: File names MUST be relatively simple and without spacing, otherwise they will fail to play.**  
 You can rename all of the wav files in a directory to simple numbered filenames with (highly recommend getting all of the files you want in the directory before doing this):
 ```
@@ -47,10 +52,14 @@ Need to convert your files from mp3? Use soxconvert -d /path/to/directory/ (defa
 ```
 soxconvert
 ```
-Test out a single wav file to make sure everything is functioning properly. Replace FILENAME with your file's name or leave it and it will use a 30 second wav already there.  
-I am using frequency 91.3 because it is low traffic in my area. You can check what is best for your area at https://radio-locator.com/cgi-bin/vacant and edit shuffleplay50.sh to reflect the best frequency for you.  I am using the github repo by markondej at https://github.com/markondej/fm_transmitter if you want more information on the fm transmitter.
+Play 50 songs at random from playlist then shutdown for night. 
+**This will shut your pi down on completion!** You can pass the argument -x prevent shutdown, however the pi does need to be properly shutdown before removing power to prevent possible corruption of the filesystem.
 ```
-sudo /home/pi/fm_transmitter/fm_transmitter -f 91.3 /home/pi/music/FILENAME.wav | play /home/pi/music/FILENAME.wav
+shuffleplay  
+```
+An example of usage with arguments to change to 5 songs, at 98.5 FM, in the directory /home/pi/music/edm/ without shutting down at the end  
+```
+shuffleplay -s 5 -f 98.5 -d /home/pi/music/edm/ -x
 ```
 To auto start playlist on boot we need to edit cron  
 ```
@@ -60,16 +69,5 @@ Add this to the end of the cron file with any options that you want changed (-f 
 ```
 @reboot bash shuffleplay
 ```
-Play 50 songs at random from playlist then shutdown for night. 
-**This will shut your pi down on completion!** You can pass the argument -x prevent shutdown, however the pi does need to be properly shutdown before removing power to prevent possible corruption of the filesystem.
-```
-cd ~/
-```
-```
-shuffleplay  
-```
-An example of usage with arguments to change to 5 songs, at 98.5 FM, in the directory /home/pi/music/edm/ without shutting down at the end  
-```
-shuffleplay -s 5 -f 98.5 -d /home/pi/music/edm/ -x
-```
+If you ever want to stop autoplaying just comment out the above code in cron
 
