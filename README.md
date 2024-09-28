@@ -23,7 +23,7 @@ Once logged in we need to install git.
 sudo apt update && sudo apt upgrade -y
 ```
 ```
-sudo apt install git -y
+sudo apt install vsftpd vim sox libsox-fmt-mp3 make build-essential libraspberrypi-dev git -y
 ```
 
 Clone the repo  
