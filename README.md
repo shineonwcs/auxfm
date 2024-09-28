@@ -1,5 +1,5 @@
 # Simple scripts automating install for simultanious aux and fm playing of wav files starting with a fresh install of Rasbian on a zero W  
-This repo is to make it easy to set up a Pi Zero W to play music via FM and output to an aux port at the same time to drive a music synchronization controller. It makes the software side relatively easy for a DIYer to set up a really cool light show with up to 10 channels. If you are in the Kansas City area and want it made for you I own Shine-On Home Services and we do Christmas lights! https://shineon.biz/christmas-lights/
+This repo is to make it easy to set up a Pi Zero W to play music via FM and output to an aux port at the same time to drive a music synchronization controller. It makes the software side relatively easy for a DIYer to set up a really cool light show with up to 10 channels. If you are in the Kansas City area and want it made for you I own Shine-On Home Services and we do Christmas lights! https://shineon.biz/christmas-lights/  
 Supplies:  
 Pi Zero W $15 ($16 if you get with headers to potentially skip any soldering with push wires)  
 Wire for antenna on GPIO 4 $0 (just used scrap).  
